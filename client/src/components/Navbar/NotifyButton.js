@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 class NotifyButton extends Component {
     render() {
         return (
-            <button>
+            <a>
                 Notifications
-            </button>
+            </a>
         )
     }
 }

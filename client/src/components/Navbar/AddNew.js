@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 class AddNew extends Component {
     render() {
         return (
-            <button>
+            <a>
                 Add Boards
-            </button>
+            </a>
         )
     }
 }

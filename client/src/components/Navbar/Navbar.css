@@ -1,0 +1,9 @@
+.nav-wrapper {
+  background-color: #026aa7; 
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+

@@ -7,6 +7,9 @@ import InfoButton from './Navbar/InfoButton';
 import NotifyButton from './Navbar/NotifyButton';
 import Profile from './Navbar/Profile';
 
+import './Navbar/Navbar.css';
+
+
 
 class Navbar extends Component {
     render() {
@@ -14,28 +17,26 @@ class Navbar extends Component {
             <nav className="nav-wrapper">
                 <div className="nav__boards">
                     <Boards />
+                </div>
+                <div className="nav__search">
                     <SearchBar />
                 </div>
                 <div className="nav__home">
                     <HomeButton />
                 </div>
-                <div className="nav__list">
-                    <ul>
-                        <li className="nav__list--add">
-                            <AddNew />
-                        </li>
-                        <li className="nav__list--info">
-                            <InfoButton />
-                        </li>
-                        <li className="nav__list--notify">
-                            <NotifyButton />
-                        </li>
-                        <li className="nav__list--profile">
-                            <Profile />
-                        </li>
-                    </ul>
+                <div className="nav__add">
+                    <AddNew />
                 </div>
-            </nav>
+                <div className="nav__info">
+                    <InfoButton />
+                </div>
+                <div className="nav__notify">
+                    <NotifyButton />
+                </div>
+                <div className="nav__profile">
+                    <Profile />
+                </div>
+            </nav >
         )
     }
 }

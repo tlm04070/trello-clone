@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 class Profile extends Component {
     render() {
         return (
-            <button>
+            <a>
                 Profile
-            </button>
+            </a>
         )
     }
 }

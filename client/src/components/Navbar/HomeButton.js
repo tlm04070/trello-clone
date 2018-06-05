@@ -2,10 +2,8 @@ import React, { Component } from 'react'
 
 const HomeButton = () => {
     return (
-        <a>
-            <button>
-                Home
-            </button>
+        <a className="nav__home--button">
+            Home
         </a>
     )
 }

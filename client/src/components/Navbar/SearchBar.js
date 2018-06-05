@@ -5,10 +5,8 @@ class SearchBar extends Component {
         return (
             <div className="nav__boards--searchBar">
                 <input placeholder="Search for a board" />
-                <a class="nav__boards--searcButton">
-                    <button>
-                        Search
-                    </button>
+                <a class="nav__boards--searchButton">
+                    Search
                 </a>
             </div>
         )

@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 class Boards extends Component {
     render() {
         return (
-            <button>
+            <a>
                 Boards
-            </button>
+            </a>
         )
     }
 }

@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 class InfoButton extends Component {
     render() {
         return (
-            <button className="infoButton">
+            <a className="infoButton">
                 Info
-            </button>
+            </a>
         )
     }
 }
