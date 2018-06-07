@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BoardsList from "./BoardsList";
+import "./Boards.css";
 
 let boards = [
   {
@@ -34,30 +35,34 @@ class Boards extends Component {
     this.state = {
       showComponent: false
     };
-    this._onButtonClick = this._onButtonClick.bind(this);
+    this.showDropdownMenu = this.showDropdownMenu.bind(this);
+    this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
   }
 
-  _onButtonClick() {
-    if (this.state.showComponent) {
-      this.setState({
-        showComponent: false
-      });
-    } else {
-      this.setState({
-        showComponent: true
-      });
-    }
+  showDropdownMenu(event) {
+    event.preventDefault();
+    this.setState({ showComponent: true }, () => {
+      document.addEventListener("click", this.hideDropdownMenu);
+    });
+  }
+
+  hideDropdownMenu() {
+    this.setState({ showComponent: false }, () => {
+      document.removeEventListener("click", this.hideDropdownMenu);
+    });
   }
 
   render() {
     return (
-      <div>
-        <a onClick={this._onButtonClick}>Boards</a>
-        {this.state.showComponent
-          ? boards.map(board => {
-              return <BoardsList key={board.name} board={board} />;
-            })
-          : null}
+      <div className="boardsMenu">
+        <a className="button" onClick={this.showDropdownMenu}>
+          Boards
+        </a>
+        {this.state.showComponent ? (
+          <div>
+            <BoardsList board={boards} />
+          </div>
+        ) : null}
       </div>
     );
   }

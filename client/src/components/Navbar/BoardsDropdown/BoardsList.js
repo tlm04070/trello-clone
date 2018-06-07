@@ -5,18 +5,18 @@ console.log(this.props);
 class BoardsList extends Component {
   render() {
     return (
-      <div>
+      <ul>
         {this.props.board.map(item => {
           return (
             <BoardsListItem
-              key={item}
+              key={item.name}
               name={item.name}
               image={item.image}
               description={item.description}
             />
           );
         })}
-      </div>
+      </ul>
     );
   }
 }
