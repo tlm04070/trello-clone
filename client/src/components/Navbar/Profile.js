@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class Profile extends Component {
-    render() {
-        return (
-            <a>
-                Profile
-            </a>
-        )
-    }
+  render() {
+    return <p>{this.props.currentUser}</p>;
+  }
 }
 
 export default Profile;
